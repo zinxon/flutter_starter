@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cubit_bloc_tutorial/bloc/product/product_bloc.dart';
 import 'package:flutter_cubit_bloc_tutorial/data/model/product.dart';
 import 'package:flutter_cubit_bloc_tutorial/pages/product_page.dart';
-import 'package:flutter_cubit_bloc_tutorial/utility/locator/service_locator.dart';
+// import 'package:flutter_cubit_bloc_tutorial/utility/locator/service_locator.dart';
 
 class HomePage extends StatefulWidget {
   @override

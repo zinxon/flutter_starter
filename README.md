@@ -1,12 +1,29 @@
-# Flutter Bloc & Cubit Tutorial
+# Flutter Starter Project
 
-### Learn from :point_right: [this post](https://resocoder.com/flutter-bloc-cubit) :point_left:.
+### Package use:
 
-#### _Find more tutorials on [resocoder.com](https://resocoder.com)_
+Environments (Flavors)
+https://www.youtube.com/watch?v=zdJkvDANiuY&t=2877s
 
-<br />
-<br />
+HTTP Networking (Dio)
+https://juejin.im/post/6860002581872115726
 
-[![Reso Coder](https://resocoder.com/wp-content/uploads/2019/09/logo_with_text_signature.png)](https://resocoder.com)
-<br />
-_Be prepared for **real** app development_
+State Management (Bloc)
+https://bloclibrary.dev/#/
+https://resocoder.com/2020/08/04/flutter-bloc-cubit-tutorial/
+
+Local storage (Flutter secure storage)
+https://pub.dev/packages/flutter_secure_storage
+
+CI / CD (Codemagic)
+https://codemagic.io/
+
+Dependency Injection (GetIt,injecable)
+https://pub.dev/packages/get_it
+https://pub.dev/packages/injectable
+
+For generating injection config:
+
+```CMD
+flutter packages pub run build_runner build
+```
