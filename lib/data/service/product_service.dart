@@ -1,9 +1,8 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:flutter_cubit_bloc_tutorial/data/model/product.dart';
+import 'package:flutter_cubit_bloc_tutorial/data/model/product_model.dart';
 import 'package:flutter_cubit_bloc_tutorial/utility/log/DioLogger.dart';
-import 'package:flutter_cubit_bloc_tutorial/utility/log/Log.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton

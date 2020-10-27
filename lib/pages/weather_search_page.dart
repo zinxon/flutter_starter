@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cubit_bloc_tutorial/bloc/weather/weather_bloc.dart';
 import 'package:flutter_cubit_bloc_tutorial/data/model/weather.dart';
+import 'package:flutter_cubit_bloc_tutorial/routes/NavigatorUtil.dart';
 
 class WeatherSearchPage extends StatefulWidget {
   static const String PATH = '/weather/search';
@@ -92,7 +93,12 @@ class CityInputField extends StatelessWidget {
         decoration: InputDecoration(
           hintText: "Enter a city",
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-          suffixIcon: Icon(Icons.search),
+          suffixIcon: RaisedButton(
+            child: Icon(Icons.search),
+            onPressed: () {
+              NavigatorUtil.goHomePage(context);
+            },
+          ),
         ),
       ),
     );

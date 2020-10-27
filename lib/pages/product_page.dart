@@ -1,7 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_cubit_bloc_tutorial/data/model/product.dart';
+import 'package:flutter_cubit_bloc_tutorial/data/model/product_model.dart';
+import 'package:flutter_cubit_bloc_tutorial/routes/NavigatorUtil.dart';
 
 class ProductPage extends StatelessWidget {
   final Product product;
@@ -91,7 +92,9 @@ class ProductPage extends StatelessWidget {
                         color: Colors.amber,
                         icon: Icon(EvaIcons.creditCard),
                         label: Text("Buy Now"),
-                        onPressed: () {},
+                        onPressed: () {
+                          NavigatorUtil.goWeatherSearchPage(context);
+                        },
                       ),
                     ),
                   ],

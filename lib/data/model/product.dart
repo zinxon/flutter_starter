@@ -13,7 +13,7 @@
 //       @required this.productName});
 // }
 
-class Product {
+class Product extends Equatable {
   int id;
   String title; //productName
   double price;
@@ -49,3 +49,5 @@ class Product {
     return data;
   }
 }
+
+class Equatable {}

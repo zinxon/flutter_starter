@@ -1,12 +1,12 @@
-import 'package:flutter_cubit_bloc_tutorial/data/model/product.dart';
+import 'package:flutter_cubit_bloc_tutorial/data/model/product_model.dart';
 
 List<Product> products = [
   Product(
-      image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      title: "iPad mini",
+      price: 100,
       description:
           "Repudiandae quibusdam quis harum odit.Autem sunt sit. Neque sapiente officia laudantium voluptatem dolores itaque dolore odio. Voluptatem reprehenderit beatae eum eligendi dolorem laborum voluptate nihil vel.",
-      price: 100,
-      title: "iPad mini"),
+      image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"),
   Product(
       image: "assets/product2.jpg",
       description:
