@@ -25,6 +25,7 @@ dependencies:
   cached_network_image: ^2.3.3
   cupertino_icons: ^0.1.3
   dio: ^3.0.10
+  easy_localization: ^2.3.3
   equatable: ^1.2.5
   eva_icons_flutter: ^2.0.1
   fluro: ^1.7.3
@@ -39,11 +40,12 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: null
+  freezed: null
   injectable_generator: null
-  freezed:
-  json_serializable:
+  json_serializable: null
 
 flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/i18n/

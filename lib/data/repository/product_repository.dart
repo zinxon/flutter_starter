@@ -19,6 +19,7 @@ class APIProductRepository implements ProductRepository {
   @override
   Stream<Product> fetchProduct(String id) async* {
     // store data in local db
+    // async* (*) means continuous stream
     // Store api response in repository.
     // First if _product has cache then return cache first and then get the api response for checking any updated product
     // If yes, return newProduct to the stream and close the stream.

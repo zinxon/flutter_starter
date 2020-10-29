@@ -24,6 +24,9 @@ Dependency Injection (GetIt & injectable)
 <https://pub.dev/packages/get_it>
 <https://pub.dev/packages/injectable> (injectable for decorator)
 
+Model Serialization (Freezed)
+<https://pub.dev/packages/freezed>
+
 Cache in reposiory
 <https://medium.com/@thomasgallinari/caching-data-with-flutter-bloc-6741ebd2f91a>
 

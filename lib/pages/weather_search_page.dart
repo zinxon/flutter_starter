@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cubit_bloc_tutorial/bloc/weather/weather_bloc.dart';
@@ -91,11 +92,12 @@ class CityInputField extends StatelessWidget {
         onSubmitted: (value) => submitCityName(context, value),
         textInputAction: TextInputAction.search,
         decoration: InputDecoration(
-          hintText: "Enter a city",
+          hintText: 'title'.tr(),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
           suffixIcon: RaisedButton(
             child: Icon(Icons.search),
             onPressed: () {
+              print(EasyLocalization.of(context).locale);
               NavigatorUtil.goHomePage(context);
             },
           ),

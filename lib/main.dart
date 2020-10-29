@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cubit_bloc_tutorial/utility/injection/injection.dart';
@@ -24,15 +25,22 @@ void main() {
   // setupLocator();
   // configureDependencies();
   initConfig();
-  runApp(MyApp());
+  runApp(EasyLocalization(
+      supportedLocales: [Locale('en'), Locale('zh', 'HK')],
+      path: 'assets/i18n', // <-- change patch to your
+      fallbackLocale: Locale('zh', 'HK'),
+      child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    context.locale = Locale('zh', 'HK');
     return MaterialApp(
         title: 'Material App',
         // home: HomePage(),
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
         home: BlocProvider(
           create: (context) => getIt<ProductBloc>(),
           child: HomePage(),
