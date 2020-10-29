@@ -5,6 +5,7 @@ import 'package:injectable/injectable.dart';
 abstract class ProductRepository {
   /// Throws [NetworkException].
   Stream<Product> fetchProduct(String id);
+  // Future<Product> fetchProduct(String id);
 }
 
 @LazySingleton(as: ProductRepository)
@@ -27,12 +28,27 @@ class APIProductRepository implements ProductRepository {
     if (_product != null) yield _product;
     final newProduct = await _productService.fetchProduct("1");
     print(newProduct == _product);
+    // if (_product == null) yield newProduct;
     if (newProduct != _product) {
       print("new product is not equal to _product");
       _product = newProduct;
       yield _product;
     }
   }
+
+  // @override
+  // Future<Product> fetchProduct(String id) async {
+  //   // store data in local db
+  //   // async* (*) means continuous stream
+  //   // Store api response in repository.
+  //   // First if _product has cache then return cache first and then get the api response for checking any updated product
+  //   // If yes, return newProduct to the stream and close the stream.
+  //   // If no, nothing. Close the stream.
+  //   print("product repository fetch");
+  //   if (_product != null) return _product;
+  //   _product = await _productService.fetchProduct("1");
+  //   return _product;
+  // }
 }
 
 class NetworkException implements Exception {}

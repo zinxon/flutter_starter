@@ -7,6 +7,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
+import '../dio/dioHelper.dart';
 import '../../bloc/product/product_bloc.dart';
 import '../../data/repository/product_repository.dart';
 import '../../data/service/product_service.dart';
@@ -22,7 +23,8 @@ GetIt $initGetIt(
   EnvironmentFilter environmentFilter,
 }) {
   final gh = GetItHelper(get, environment, environmentFilter);
-  gh.lazySingleton<ProductService>(() => ProductService());
+  gh.lazySingleton<DioProvider>(() => DioProvider());
+  gh.lazySingleton<ProductService>(() => ProductService(get<DioProvider>()));
   gh.lazySingleton<WeatherRepository>(() => FakeWeatherRepository());
   gh.lazySingleton<ProductRepository>(
       () => APIProductRepository(get<ProductService>()));

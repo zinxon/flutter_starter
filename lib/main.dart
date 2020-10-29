@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
           create: (context) => getIt<ProductBloc>(),
           child: HomePage(),
         ),
-        initialRoute: AppRoutes.home,
+        // initialRoute: AppRoutes.home,
         onGenerateRoute: Application.router.generator);
   }
 }

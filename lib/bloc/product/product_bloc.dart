@@ -30,7 +30,6 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
     if (event is GetProduct) {
       try {
         yield ProductLoading();
-        // // usecase
         // final product = await _productRepository.fetchProduct(event.id);
         // yield ProductLoaded(product);
         yield* _productRepository
